@@ -1,0 +1,278 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xsd:element name="root">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="module" type="moduleType" />
+				<xsd:element name="include" type="includeType" />
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="moduleType">
+		<xsd:sequence minOccurs="0" maxOccurs="1">
+			<xsd:element name="entity" type="entityType" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="sql" type="sqlFragmentType" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="statement" type="statementType" />
+				<xsd:element name="stmt" type="statementType" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="identityName" use="required" />
+		<xsd:attribute name="package" type="packageName" use="optional"
+			default="" />
+		<xsd:attribute name="description" type="xsd:normalizedString"
+			use="optional" default="" />
+	</xsd:complexType>
+
+	<xsd:complexType name="includeType">
+		<xsd:attribute name="src" type="xsd:string" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="entityType">
+		<xsd:choice minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="field" type="fieldType" />
+		</xsd:choice>
+		<xsd:attribute name="name" type="identityName" use="required" />
+		<xsd:attribute name="description" type="xsd:normalizedString"
+			use="optional" default="" />
+	</xsd:complexType>
+
+	<xsd:complexType name="fieldType">
+		<xsd:attribute name="name" type="identityName" use="required" />
+		<xsd:attribute name="type" type="fieldTypeType" use="optional"
+			default="string" />
+		<xsd:attribute name="key" type="boolean" use="optional"
+			default="false" />
+		<xsd:attribute name="description" type="xsd:normalizedString"
+			use="optional" default="" />
+		<xsd:attribute name="defaultValue" type="xsd:normalizedString"
+			use="optional" default="" />
+	</xsd:complexType>
+
+	<xsd:complexType name="sqlFragmentType" mixed="true">
+		<xsd:attribute name="name" type="identityName" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="statementType" mixed="true">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="sqlRef" type="sqlReferenceType"
+					minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element name="dynamic" type="dynamicStatementType"
+					minOccurs="0" maxOccurs="unbounded" />
+			</xsd:choice>
+			<xsd:element name="parameter" type="parameterType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="identityName" use="required" />
+		<xsd:attribute name="allowPaging" type="boolean"
+			default="auto" />
+		<xsd:attribute name="commandType" type="statementCommandTypeType"
+			default="text" />
+		<xsd:attribute name="resultType" type="statementResultTypeType"
+			default="updated-count" />
+		<xsd:attribute name="entityName" type="identityName"
+			use="optional" />
+		<xsd:attribute name="autoKey" type="autoKeyName" use="optional" />
+		<xsd:attribute name="readonly" type="boolean" default="auto" />
+		<xsd:attribute name="description" type="xsd:normalizedString"
+			use="optional" default="" />
+	</xsd:complexType>
+
+	<xsd:complexType name="sqlReferenceType">
+		<xsd:attribute name="name" type="identityName" use="required" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="statementCommandTypeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="text" />
+			<!-- store procedure // -->
+			<xsd:enumeration value="sp" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="dynamicStatementType">
+		<xsd:choice minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="isNull" type="dynamicStatementTextType" />
+			<xsd:element name="isNotNull" type="dynamicStatementTextType" />
+			<xsd:element name="isEmpty" type="dynamicStatementTextType" />
+			<xsd:element name="isNotEmpty" type="dynamicStatementTextType" />
+			<xsd:element name="isNullOrEmpty" type="dynamicStatementTextType" />
+			<xsd:element name="equals" type="dynamicStatementTextType" />
+			<xsd:element name="notEquals" type="dynamicStatementTextType" />
+			<xsd:element name="in" type="dynamicStatementTextType" />
+			<xsd:element name="notIn" type="dynamicStatementTextType" />
+		</xsd:choice>
+		<xsd:attribute name="prepend" type="xsd:normalizedString"
+			use="optional" default="" />
+		<xsd:attribute name="append" type="xsd:normalizedString"
+			use="optional" default="" />
+		<xsd:attribute name="joint" type="xsd:normalizedString"
+			use="optional" default="AND" />
+	</xsd:complexType>
+
+	<xsd:complexType name="dynamicStatementTextType" mixed="true">
+		<xsd:attribute name="parameter" type="identityName" use="required" />
+		<xsd:attribute name="value" type="xsd:normalizedString"
+			default="" />
+	</xsd:complexType>
+
+	<xsd:complexType name="parameterType">
+		<xsd:attribute name="name" type="identityName" use="required" />
+		<xsd:attribute name="type" type="parameterTypeType" use="required" />
+		<xsd:attribute name="size" type="columnSizeType" use="optional"
+			default="0">
+		</xsd:attribute>
+		<xsd:attribute name="match" type="parameterMatchType"
+			default="exact" />
+		<xsd:attribute name="description" type="xsd:normalizedString"
+			use="optional" default="" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="columnSizeType">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:minInclusive fixed="true" value="0" />
+			<xsd:maxInclusive fixed="true" value="4000" />
+			<xsd:whiteSpace value="collapse" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="parameterTypeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="string" />
+			<xsd:enumeration value="int" />
+			<xsd:enumeration value="integer" />
+			<xsd:enumeration value="money" />
+			<xsd:enumeration value="decimal" />
+			<xsd:enumeration value="currency" />
+			<xsd:enumeration value="datetime" />
+			<xsd:enumeration value="date" />
+			<xsd:enumeration value="start-date" />
+			<xsd:enumeration value="start-month" />
+			<xsd:enumeration value="start-year" />
+			<xsd:enumeration value="end-date" />
+			<xsd:enumeration value="end-month" />
+			<xsd:enumeration value="end-year" />
+			<xsd:enumeration value="double" />
+			<xsd:enumeration value="real" />
+			<xsd:enumeration value="bit" />
+			<xsd:enumeration value="bool" />
+			<xsd:enumeration value="boolean" />
+			<xsd:enumeration value="binary" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="parameterMatchType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="exact" />
+			<xsd:enumeration value="starts-with" />
+			<xsd:enumeration value="ends-with" />
+			<xsd:enumeration value="contains" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="fieldTypeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:enumeration value="string" />
+			<xsd:enumeration value="int" />
+			<xsd:enumeration value="integer" />
+			<xsd:enumeration value="money" />
+			<xsd:enumeration value="decimal" />
+			<xsd:enumeration value="currency" />
+			<xsd:enumeration value="datetime" />
+			<xsd:enumeration value="real" />
+			<xsd:enumeration value="double" />
+			<xsd:enumeration value="bit" />
+			<xsd:enumeration value="bool" />
+			<xsd:enumeration value="boolean" />
+			<xsd:enumeration value="binary" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="statementResultTypeType">
+		<xsd:restriction base="xsd:normalizedString">
+			<!-- Entity -->
+			<xsd:enumeration value="entities" />
+			<xsd:enumeration value="entity" />
+			<!-- Scalar -->
+			<xsd:enumeration value="string" />
+			<xsd:enumeration value="int" />
+			<xsd:enumeration value="integer" />
+			<xsd:enumeration value="money" />
+			<xsd:enumeration value="decimal" />
+			<xsd:enumeration value="currency" />
+			<xsd:enumeration value="datetime" />
+			<xsd:enumeration value="date" />
+			<xsd:enumeration value="double" />
+			<xsd:enumeration value="bit" />
+			<xsd:enumeration value="bool" />
+			<xsd:enumeration value="boolean" />
+			<xsd:enumeration value="binary" />
+			<xsd:enumeration value="array" />
+			<!-- List -->
+			<xsd:enumeration value="list-string" />
+			<xsd:enumeration value="list-int" />
+			<xsd:enumeration value="list-integer" />
+			<xsd:enumeration value="list-money" />
+			<xsd:enumeration value="list-decimal" />
+			<xsd:enumeration value="list-currency" />
+			<xsd:enumeration value="list-datetime" />
+			<xsd:enumeration value="list-date" />
+			<xsd:enumeration value="list-double" />
+			<xsd:enumeration value="list-bit" />
+			<xsd:enumeration value="list-bool" />
+			<xsd:enumeration value="list-boolean" />
+			<xsd:enumeration value="list-binary" />
+			<xsd:enumeration value="list-array" />
+			<!-- Update -->
+			<xsd:enumeration value="uc" />
+			<xsd:enumeration value="updated-count" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="boolean">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="auto" />
+			<xsd:enumeration value="0" />
+			<xsd:enumeration value="1" />
+			<xsd:enumeration value="yes" />
+			<xsd:enumeration value="no" />
+			<xsd:enumeration value="true" />
+			<xsd:enumeration value="false" />
+			<xsd:enumeration value="on" />
+			<xsd:enumeration value="off" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="text">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="identityName">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1" />
+			<xsd:pattern value="[\w_]+" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="autoKeyName">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1" />
+			<xsd:pattern value="([\w_]+)|\*" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="packageName">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="0" />
+			<xsd:pattern value="[\w_]*" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

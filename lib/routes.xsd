@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<xsd:element name="root">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="module" type="moduleType" />
+				<xsd:element name="route" type="routeType" />
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="moduleType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="route" type="routeType" />
+		</xsd:choice>
+		<xsd:attribute name="prefix" type="xsd:normalizedString"
+			use="optional" default="" />
+	</xsd:complexType>
+
+	<xsd:complexType name="routeType">
+		<xsd:sequence minOccurs="0" maxOccurs="1">
+			<xsd:element name="defaults" type="defaultsType"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="restrictions" type="restrictionsType"
+				minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="pattern" type="xsd:normalizedString"
+			use="required" />
+		<xsd:attribute name="class" type="className" use="required" />
+		<xsd:attribute name="method" type="identityName" use="optional"
+			default="execute" />
+		<xsd:attribute name="verb" type="httpVerb" use="optional"
+			default="POST" />
+		<xsd:attribute name="template" type="xsd:normalizedString"
+			use="optional" default="" />
+	</xsd:complexType>
+
+	<xsd:complexType name="defaultsType">
+		<xsd:choice minOccurs="0" maxOccurs="1">
+			<xsd:element name="param" type="paramDefaultType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="restrictionsType">
+		<xsd:choice minOccurs="0" maxOccurs="1">
+			<xsd:element name="param" type="paramRestrictionType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="paramDefaultType">
+		<xsd:attribute name="name" type="identityName" />
+		<xsd:attribute name="value" type="xsd:normalizedString" />
+	</xsd:complexType>
+
+	<xsd:complexType name="paramRestrictionType">
+		<xsd:attribute name="name" type="identityName" />
+		<xsd:attribute name="value" type="xsd:normalizedString" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="identityName">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1" />
+			<xsd:pattern value="[\w_]+" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="className">
+		<xsd:restriction base="xsd:normalizedString">
+			<xsd:minLength value="1" />
+			<xsd:pattern value="[\w\._]+" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="httpVerb">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="GET" />
+			<xsd:enumeration value="POST" />
+			<xsd:enumeration value="PUT" />
+			<xsd:enumeration value="DELETE" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

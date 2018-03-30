@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	
+	<context-param>
+		<param-name>armory.log.dir</param-name>
+		<param-value>C:\tomcat\log\xinran</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>armory.log4j.config</param-name>
+		<param-value>C:\tomcat\etc\xinran\log4j.properties</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.xx.armory.web.listeners.Log4jConfigListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>armory</filter-name>
+		<filter-class>org.xx.armory.web.dispatchers.CoreDispatcher</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>armory</filter-name> 
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://web.armory.xx.org</taglib-uri>
+			<taglib-location>/WEB-INF/tld/armory.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	<welcome-file-list>
+		<welcome-file>web/index-all.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

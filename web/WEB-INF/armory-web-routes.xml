@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../lib/routes.xsd">
+	<module prefix="/info">
+		<route pattern="/${type}/top" class="com.banhui.midsrv.contmag.service.impl.NoticeServiceImpl"
+			method="getTopInfoList" verb="GET" template="/debug" >
+		</route>
+		<route pattern="/${type}/all" class="com.banhui.midsrv.contmag.service.impl.NoticeServiceImpl"
+			method="getInfoList" verb="GET" template="/debug" >
+		</route>
+		<route pattern="/${type}/${id}" class="com.banhui.midsrv.contmag.service.impl.NoticeServiceImpl"
+			method="getInfo" verb="GET" template="/debug" >
+		</route>
+	</module>
+	<module prefix="/book" >
+		<route pattern="/index/${pageIndex}" class="bookstore.service.BookService"
+			method="index" verb="POST" template="/index">
+			<defaults>
+				<param name="pageIndex" value="1" />
+			</defaults>
+		</route>
+		<route pattern="/index2" class="bookstore.service.BookService"
+			method="index2" verb="GET" template="/index2">
+		</route>
+		<route pattern="/list-titles" template="/debug" class="bookstore.service.BookService"
+			method="findAllTitles"  verb="GET" />
+	</module>
+	
+</root>
