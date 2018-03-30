@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project default="war" basedir=".">
+	<property name="app.name" value="xinran" />
+	<property name="app.war" value="${app.name}.war" />
+	<property name="app.copyright" value="" />
+
+	<property name="src.dir" value="src" />
+	<property name="src.encoding" value="utf-8" />
+	<property name="web.dir" value="web" />
+	<property name="lib.dir" value="lib" />
+	<property name="build.dir" value="build" />
+	<property name="dist.dir" value="dist" />
+	<property name="docs.dir" value="docs" />
+
+	<target name="init">
+		<delete dir="${build.dir}" failonerror="false" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${build.dir}" />
+	</target>
+
+	<target name="war" depends="init">
+		<delete file="${dist.dir}/${app.war}" failonerror="false" />
+		<war destfile="${dist.dir}/${app.war}" webxml="${web.dir}/WEB-INF/web.xml">
+			<fileset dir="${web.dir}">
+				<exclude name="**/*.bak" />
+				<exclude name="/WEB-INF/web*.xml" />
+			</fileset>
+			<lib dir="${lib.dir}">
+				<exclude name="**/*src*" />
+				<exclude name="**/*source*" />
+				<exclude name="**/*javadoc*" />
+				<exclude name="**/armory-doc.jar" />
+			</lib>
+			<classes dir="${build.dir}" />
+		</war>
+	</target>
+
+	<target name="war2" depends="init">
+		<delete file="${dist.dir}/${app.war}" failonerror="false" />
+		<war destfile="${dist.dir}/${app.war}" webxml="${web.dir}/WEB-INF/web2.xml">
+			<fileset dir="${web.dir}">
+				<exclude name="**/*.bak" />
+				<exclude name="/WEB-INF/web*.xml" />
+			</fileset>
+			<lib dir="${lib.dir}">
+				<exclude name="**/*src*" />
+				<exclude name="**/*source*" />
+				<exclude name="**/*javadoc*" />
+				<exclude name="**/armory-doc.jar" />
+			</lib>
+			<classes dir="${build.dir}" />
+		</war>
+	</target>
+</project>
