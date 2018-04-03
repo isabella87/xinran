@@ -1,5 +1,4 @@
-# xinran
-web page service
+# banhuitong
 
 一，准备阶段：
 
@@ -20,6 +19,12 @@ ssh -T git@github.com
 ​	url = https://用户名：密码@github.com/用户名/仓库名.git
 
 ​	例如：url=	https://isabella87:760810ssg@github.com/isabella87/xrsrv.git
+
+5，设置配置文件中用户基本信息
+
+git config --global user.name "isabella87"
+
+git config --global user.email  429509577@qq.com
 
 
 
@@ -53,7 +58,7 @@ git push -u origin master
 
 
 
-------------
+------
 
 7，git status 列出项目文件中的文件状态
 
@@ -62,3 +67,20 @@ git push -u origin master
 
 
 注意：7,8步后重复5,6步。
+
+
+
+三，获取github上项目仓库内容（在本地建立一个项目仓库）
+
+1，现在本地新建一个文件夹，把该文件夹作为一个本地仓库，然后使用终端命令进入该文件夹。
+
+2，初始化版本仓库：git init
+
+3，复制github中项目的的url，使用以下命令进行以下仓库代码的同步
+
+​	git clone url  
+
+例如 git clone https://github.com/isabella87/banhuitong.git
+
+
+
