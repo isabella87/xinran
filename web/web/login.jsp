@@ -17,7 +17,7 @@
           <!--<div class="ban_login_info_warning">账号密码错误,3小时后再试。</div>-->
           <div class="ban_login_id">
             <label for="textfield" class="ban_login_id_l">用户名</label>
-            <input type="text" name="login-name-or-mobile" id="login-name-or-mobile" placeholder="注册账号或萌承绑定手机" class="ban_login_id_in text validate[required]" />
+            <input type="text" name="login-name-or-mobile" id="login-name-or-mobile" placeholder="注册账号或石玖信息绑定手机" class="ban_login_id_in text validate[required]" />
           </div>
           <div class="ban_login_pw">
             <label for="textfield2" class="ban_login_pw_l">密码</label>

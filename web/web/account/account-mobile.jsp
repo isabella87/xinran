@@ -8,7 +8,7 @@
   <div class="ban_path">
     <div class="ban_wrapper">
       <div class="ban_path_in"><a href="/xinran/index.html" class="ban_path_home"></a>&gt;<a href="#" class="ban_path_a">账户中心</a>
-      &gt;<a href="#" class="ban_path_a">萌承账户信息</a>&gt;<a href="#" class="ban_path_a">修改手机</a></div>
+      &gt;<a href="#" class="ban_path_a">石玖账户信息</a>&gt;<a href="#" class="ban_path_a">修改手机</a></div>
     </div>
   </div>
   <div class="ban_wrapper">
@@ -71,7 +71,7 @@
             
             
             <div class="ban_infobox">
-              <label for="textfield2" class="ban_infobox_label">萌承登录密码</label>
+              <label for="textfield2" class="ban_infobox_label">石玖登录密码</label>
               <div class="ban_infobox_inputbox">
                 <div class="ban_infobox_input_w">
                   <input type="password" onselectstart="return false;" onpaste="return false;" name="pwd" id="pwd" class="ban_infobox_input validate[required]" placeholder="" />

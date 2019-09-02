@@ -46,7 +46,7 @@
 							<div class="ban_infobox_inputbox">
 								<div class="ban_infobox_input_w">
 									<input type="text" name="login-name-or-mobile" id="login-name-or-mobile"
-										class="ban_infobox_input" placeholder="注册账号或萌承绑定手机" />
+										class="ban_infobox_input" placeholder="注册账号或石玖绑定手机" />
 								</div>
 							</div>
 							<div class="ban_infobox_u"></div>
@@ -132,7 +132,7 @@
 				  <div class="ban_page_regok">
 				  	<div class="ban_result_succeed">
 		              <div class="ban_result_t">
-		                <div class="ban_result_depict">萌承帐户密码重置成功。</div>
+		                <div class="ban_result_depict">石玖帐户密码重置成功。</div>
 		              </div>
 		            </div></div>
 				 </div>

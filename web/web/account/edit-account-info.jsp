@@ -9,7 +9,7 @@
 <div class="ban_content ban_accountinfo">
   <div class="ban_path">
     <div class="ban_wrapper">
-      <div class="ban_path_in"><a href="/xinran/index.html" class="ban_path_home"></a>&gt;<a href="#" class="ban_path_a">账户中心</a>&gt;<a href="#" class="ban_path_a">萌承账户信息</a></div>
+      <div class="ban_path_in"><a href="/xinran/index.html" class="ban_path_home"></a>&gt;<a href="#" class="ban_path_a">账户中心</a>&gt;<a href="#" class="ban_path_a">石玖账户信息</a></div>
     </div>
   </div>
   <div class="ban_wrapper">
@@ -17,7 +17,7 @@
       <%@include file="../account/account-left.jsp" %>
       <div class="ban_account_content">
         <div class="ban_account_content_w">
-          <h2 class="ban_page_title">萌承账户信息
+          <h2 class="ban_page_title">石玖账户信息
           
           <div class="ban_page_title_tool" id="scanOrgDiv" style="display: none;">
 					<a:a href="show-org-info.html" cssClass="ban_button_check">查看机构信息</a:a>

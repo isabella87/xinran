@@ -6,12 +6,12 @@
 	
 	<context-param>
 		<param-name>armory.log.dir</param-name>
-		<param-value>C:\tomcat\log\xinran</param-value>
+		<param-value>C:\Tomcat 9.0\log\xinran</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>armory.log4j.config</param-name>
-		<param-value>C:\tomcat\etc\xinran\log4j.properties</param-value>
+		<param-value>C:\Tomcat 9.0\etc\xinran\log4j.properties</param-value>
 	</context-param>
 
 	<listener>

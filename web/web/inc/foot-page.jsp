@@ -23,25 +23,25 @@
           <ul class="ban_qrcode_ul">
            <%--  <li class="ban_qrcode_li">
               <h3 class="ban_qrcode_t">微信服务号</h3>
-              <a:img cssClass="ban_qrcode_img" src="weixin1.png" title="萌承科技微信服务号"/>
+              <a:img cssClass="ban_qrcode_img" src="weixin1.png" title="石玖信息科技微信服务号"/>
             </li>
             <li class="ban_qrcode_li" style="margin-right: 10px">
               <h3 class="ban_qrcode_t">微信订阅号</h3>
-              <a:img cssClass="ban_qrcode_img" src="weixin2.png" title="萌承科技微信订阅号" /></li> --%>
+              <a:img cssClass="ban_qrcode_img" src="weixin2.png" title="石玖信息科技微信订阅号" /></li> --%>
             <li class="ban_qrcode_li">
-              <h3 class="ban_qrcode_t">萌承科技</h3>
-              <a:img src="ban_foot_logo.png" cssClass="ban_qrcode_img" title="萌承科技" />
+              <h3 class="ban_qrcode_t">石玖科技</h3>
+              <a:img src="ban_foot_logo.png" cssClass="ban_qrcode_img" title="石玖信息科技" />
             </li>
           </ul>
         </div>
-    	Copyright&nbsp;&copy;2016&nbsp;<a href="/xinran/index.html" class="ban_bottom_a">上海萌承电子科技有限公司</a>&nbsp;&nbsp;版权所有<br />
-      上海&nbsp;唐山路路806号&nbsp;(200080)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E_mail: <a href="mailto:mengcheng_kj@163.com" class="ban_bottom_a">mengcheng_kj@163.com</a><br />
+    	Copyright&nbsp;&copy;2016&nbsp;<a href="/xinran/index.html" class="ban_bottom_a">上海石玖信息科技有限公司</a>&nbsp;&nbsp;版权所有<br />
+      上海&nbsp;周家嘴路3255号&nbsp;(200093)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E_mail: <a href="mailto:mshijiu_kf@163.com" class="ban_bottom_a">shijiu_kf@163.com</a><br />
     	<a href="https://www.sgs.gov.cn/notice/notice/view?uuid=NEK5QOkBQXqicrMtFEq_BOB6kw5eM0Rs&tab=01" class="ban_bottom_a" target="_blank">国家企业信用信息公示系统</a>
    		<a href="http://www.miitbeian.gov.cn/" class="ban_bottom_a" target="_blank">沪ICP备17018821号</a>
    		
     </div>
    	<div class="ban_bottom_tel" style="width:1025px">
-       	<span style="position: relative; top: -15px">客服热线（服务时间 9：00-21：00）：</span><span class="ban_bottom_tel_n">021 6546 1161</span>
+       	<span style="position: relative; top: -15px">客服热线（服务时间 9：00-21：00）：</span><span class="ban_bottom_tel_n">021 5107 3698</span>
          <div class="ban_flink" style="position: relative; top: -5px">
           <ul class="ban_flink_ul">
 	         <%-- <li class="ban_flink_li"><a href="http://www.lubansoft.com" title="鲁班软件" class="ban_flink_a1" target="_blank"><a:img src="ban_flink1.png" cssClass="ban_flink_img" /></a></li>

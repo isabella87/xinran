@@ -219,7 +219,7 @@
                 
            	</div>
 			<div class="ban_jobbox_way">
-				简历请发送至：mengcheng_kj@163.com<br />咨询电话：<span class="ban_tel_num">021-6546-1161</span>
+				简历请发送至：shijiu_kf@163.com<br />咨询电话：<span class="ban_tel_num">021-5107-3698</span>
 			</div>
         </div>
         <div class="ban_jobbox_right">

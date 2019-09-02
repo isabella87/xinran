@@ -33,7 +33,7 @@
 
 <script type="text/javascript">
 'use stricts';
-var PageTitle = "萌承科技，电子科技业信息服务专家";
+var PageTitle = "石玖信息科技，电子科技业信息服务专家";
 var page = { curr: Sys.getPage() || 1, isMainPage : true };
 var g_dataList = new Array();
 

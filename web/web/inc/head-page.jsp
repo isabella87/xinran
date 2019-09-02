@@ -8,16 +8,16 @@
 <div class="ban_top">
 	<div class="ban_wrapper">
 
-		<div class="ban_tel">客服热线：<span class="ban_tel_num">021 6546 1161</span></div>
+		<div class="ban_tel">客服热线：<span class="ban_tel_num">021 5107 3698</span></div>
 	    <%-- <div class="ban_follow">
-	    	<a href="http://blog.sina.com.cn/banbankblog" target="_blank" title="关注萌承博客" class="ban_follow_a">
-	    		<a:img cssClass="ban_follow_img" src="ban_sblog.png" title="关注萌承博客" /></a>
+	    	<a href="http://blog.sina.com.cn/banbankblog" target="_blank" title="关注石玖博客" class="ban_follow_a">
+	    		<a:img cssClass="ban_follow_img" src="ban_sblog.png" title="关注石玖博客" /></a>
 
-	    	<a href="http://weibo.com/banhuit" target="_blank" title="关注萌承微博" class="ban_follow_a">
-	    		<a:img cssClass="ban_follow_img" src="ban_sina.png" title="关注萌承微博" /></a>
+	    	<a href="http://weibo.com/banhuit" target="_blank" title="关注石玖微博" class="ban_follow_a">
+	    		<a:img cssClass="ban_follow_img" src="ban_sina.png" title="关注石玖微博" /></a>
 
 	    	<div class="ban_follow_a" style=" width:auto">
-		    	<a:img cssClass="ban_follow_img" src="ban_wx.png" title="关注萌承微信" />
+		    	<a:img cssClass="ban_follow_img" src="ban_wx.png" title="关注石玖微信" />
 		    	<span style="padding-right: 8px; position: relative; top: -10px;">扫码关注官方微信</span>
 		        <ul class="ban_follow_info">
 		          <li class="ban_follow_info_li">
@@ -29,7 +29,7 @@
 		        </ul>
 	      </div>
 	      <div class="ban_follow_a"  style=" width:auto">
-	      <a href="/portal2/download.html" target="_blank" title="下载萌承手机客户端"  style=" text-decoration: none"><a:img src="ban_app.png"  cssClass="ban_follow_img" /><span style="padding-right: 8px; position: relative; top: -10px; color: #fbd609;">下载手机APP</span></a>
+	      <a href="/portal2/download.html" target="_blank" title="下载石玖手机客户端"  style=" text-decoration: none"><a:img src="ban_app.png"  cssClass="ban_follow_img" /><span style="padding-right: 8px; position: relative; top: -10px; color: #fbd609;">下载手机APP</span></a>
             <ul class="ban_follow_info">
              <!--<li class="ban_follow_info_li">
                 <h3 class="ban_follow_info_t" style="font-size: 16px">IOS版</h3>
@@ -58,11 +58,11 @@
 </div>
 <div class="ban_head">
 	<div class="ban_wrapper ban_headbg">
-		<div class="ban_title" title="萌承">
-			<a href="/xinran/index.html" class="ban_logo" title="萌承"><a:img cssClass="ban_logo_img" src="ban_logo3.png" title="萌承Logo" /></a>
+		<div class="ban_title" title="石玖">
+			<a href="/xinran/index.html" class="ban_logo" title="上海石玖"><a:img cssClass="ban_logo_img" src="ban_logo3.png" title="上海石玖Logo" /></a>
 		</div>
 		<div class="ban_slogan">
-			<span class="ban_slogan_stress">上海萌承电子科技有限公司</span>
+			<span class="ban_slogan_stress">上海石玖信息科技有限公司</span>
 		</div>
 		<div class="ban_nav">
 			<div class="ban_nav_switch"></div>

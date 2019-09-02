@@ -10,7 +10,7 @@
   <div class="ban_path">
     <div class="ban_wrapper">
       <div class="ban_path_in"><a href="/xinran/index.html" class="ban_path_home"></a>&gt;<a href="#" class="ban_path_a">账户中心</a>
-      &gt;<a href="#" class="ban_path_a">萌承账户信息</a>&gt;<a href="#" class="ban_path_a">补录推荐码</a></div>
+      &gt;<a href="#" class="ban_path_a">石玖账户信息</a>&gt;<a href="#" class="ban_path_a">补录推荐码</a></div>
     </div>
   </div>
   <div class="ban_wrapper">

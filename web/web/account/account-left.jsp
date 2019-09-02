@@ -36,7 +36,7 @@
          <h2 class="ban_account_sidebar_t">我的账户</h2>
          <ul class="ban_account_sidebar_ul2">
          <!-- <li class="ban_account_sidebar_li2"><a id="a_accountment"  class="ban_account_sidebar_a">资产概况</a></li>   -->
-           <li class="ban_account_sidebar_li2"><a id="a_account_info" href="javascript:void(0);" class="ban_account_sidebar_a">萌承账户信息</a></li>
+           <li class="ban_account_sidebar_li2"><a id="a_account_info" href="javascript:void(0);" class="ban_account_sidebar_a">石玖信息账户信息</a></li>
            <!--<li class="ban_account_sidebar_li2"><a id="a_jxpay_account_info" href="javascript:void(0);" class="ban_account_sidebar_a">银行存管账户管理</a></li>   -->
            <li class="ban_account_sidebar_li2 makeupRecMobile"><a id="a_makeup_rec_mobile" href="javascript:void(0);" class="ban_account_sidebar_a">补录推荐码</a></li>
          </ul>

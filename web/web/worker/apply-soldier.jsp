@@ -108,7 +108,7 @@
 <%@include file="../inc/foot-page.jsp" %>
 
 <script type="text/javascript">
-var PageTitle = "萌承科技，电子科技业信息服务专家";
+var PageTitle = "石玖信息科技，电子科技业信息服务专家";
 var fid = null;
 var index ; 
 var valCfg = {boxClass:'ban_infobox',eBoxClass:'ban_infobox_cue',errMsg:'<span class="ban_infobox_cue_warn">#[msg]</span>'};

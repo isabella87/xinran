@@ -248,7 +248,7 @@
 				<div class="ban_infobox_w">
 					<div class="ban_page_regok">
 			        	<div class="ban_result_succeed">
-			            	<div class="ban_result_t"><div class="ban_result_depict">恭喜，您已成功注册萌承科技帐号！</div>
+			            	<div class="ban_result_t"><div class="ban_result_depict">恭喜，您已成功注册石玖科技帐号！</div>
 				            <!-- <p class="ban_result_additional">接下来请您注册银行存管账户，以使用此账户进行资金流转、出借。<br /></p> -->
 			            </div>
 			          </div>

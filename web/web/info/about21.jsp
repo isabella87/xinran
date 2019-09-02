@@ -17,9 +17,9 @@
       <div class="ban_about_box">
         <h1>联系我们</h1>
         <h2>客户服务</h2>
-        <p>如果您有电脑、空调、冰箱等家电购买及维修需求，请拨打服务热线电话：<span class="ban_tel_num">021-6546-1161</span></p>
+        <p>如果您有电脑、空调、冰箱等家电购买及维修需求，请拨打服务热线电话：<span class="ban_tel_num">021-5107-3698</span></p>
         <h2>媒体联络</h2>
-        <p>如果你有对萌承科技的采访需求，或其他媒体合作业务，请发送邮件至：<a href="maillto:mengcheng_kj@163.com">mengcheng_kj@163.com</a></p>
+        <p>如果你有对石玖信息科技的采访需求，或其他媒体合作业务，请发送邮件至：<a href="maillto:shijiu_kf@163.com">shijiu_kf@163.com</a></p>
         <p>&nbsp;</p>
 		<%-- <a:img src="ban_contact_1.png" title=""/> --%>
 
@@ -30,7 +30,7 @@
 
 <%@include file="../inc/foot-page.jsp" %>
 <script type="text/javascript">
-var pageName = '联系我们',PageTitle = pageName+'_了解我们_萌承科技';
+var pageName = '联系我们',PageTitle = pageName+'_了解我们_石玖信息科技';
 </script>
 </body>
 </html>
